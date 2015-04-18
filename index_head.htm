@@ -1,0 +1,63 @@
+<div class="index_head w993 center">
+	<div id="_userlogin">
+		<div class="userlogin">
+			<div class="userlogin-right">
+				<a href="http://www.zgghw.org/plus/guestbook.php" target="_blank">在线留言</a> | 
+				<a  href='#' onClick="this.style.behavior='url(#default#homepage)';this.setHomePage('http://www.zgghw.org');">设为首页</a> | 
+				<a href="#" target="_blank">简体版</a> | 
+				<a href="#" target="_blank">繁体版</a> | 
+				<a href="#" target="_blank">英文版</a>
+			</div>
+			<form name="userlogin" action="{dede:global.cfg_memberurl/}/index_do.php" method="POST">
+			<input type="hidden" name="fmdo" value="login" />
+			<input type="hidden" name="dopost" value="login" />
+			<input type="hidden" name="keeptime" value="604800" />
+			<span>用户名 : </span><input type="text" name="userid" size="10" class="ipt-txt" />
+			<span>密　码 : </span><input type="password" name="pwd" size="10" class="ipt-txt" />
+			<span>验证码 : </span><input type="text" name="vdcode" size="4" class="ipt-txt" />
+			<span class="login_code"><img src="{dede:global.cfg_cmsurl/}/include/vdimgck.php" /></span>
+			<span><button type="submit" class="btn">登　录</button></span>
+			<span><a href="{dede:global.cfg_memberurl/}/index_do.php?fmdo=user&dopost=regnew" target="_blank">注册</a></span>
+			<span><a href="{dede:global.cfg_memberurl/}/resetpassword.php" target="_blank">忘记密码</a></span>
+			</form>
+		</div>
+	</div>
+	
+	
+	<div class="nav">
+		<div class="search form" style="float: right;">
+			<form action="{dede:field name='phpurl'/}/search.php" name="formsearch">
+				 <input type="hidden" name="kwtype" value="0" />
+				 <input name="keyword" type="text" class="search-keyword" id="search-keyword" />
+				 <select name="searchtype" class="search-option" id="search-option">
+						 <option value="titlekeyword" selected='1'>智能模糊搜索</option>
+						 <option value="title">仅搜索标题</option>
+				 </select>
+				 <button type="submit" class="search-submit">搜索</button>
+			</form>
+		</div>
+		<div class="nav_link">
+			<a href="http://www.zgghw.org/html/chengshimoxingzhanshi/" target="_blank">中国城市之花</a> 
+			<a href="http://www.zgghw.org/html/youxiuguihuazhanshi/" target="_blank">优秀规划展示</a> 
+			<a href="http://www.zgghw.org/html/youxiudichanzhanshi/" target="_blank">优秀地产展示</a> 
+			<a href="http://www.zgghw.org/html/chengshidanganguan/" target="_blank">中国开发区</a> 
+			<a href="http://www.zgghw.org/html/touziguihua/" target="_blank">投融资战略规划</a>
+		</div>
+	</div>
+	
+	<div class="gov">
+		<ul>
+			{dede:flink row='36' typeid='10' /}
+		</ul>
+	</div>
+	
+	<div class="banner">
+	<table width="100%" border="0" cellspacing="3" cellpadding="3">
+	<tr>
+		<td width="164">{dede:myad name='index_top_column_left'/}</td>
+		<td>{dede:myad name='index_top_column_middle'/}</td>
+		<td width="164">{dede:myad name='index_top_column_right'/}</td>
+	</tr>
+	</table>
+	</div>
+</div>

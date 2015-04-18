@@ -1,0 +1,57 @@
+<div class="commend mt1">
+	<dl class="tbox new-border">
+		<dt class="new-style"><strong>推荐内容</strong></dt>
+		<dd>
+			<ul class="d4">
+				{dede:arclist row='5' titlelen='42' orderby='pubdate' idlist='' type=''}
+				<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a>
+					<p>[field:description function='cn_substr(@me,80)'/]...</p>
+				</li>
+				{/dede:arclist}
+			</ul>
+		</dd>
+	</dl>
+</div>
+
+<div class="mt1">
+	<dl class="tbox new-border">
+		<dt class="new-style"><strong>热点图集</strong></dt>
+		<dd>
+			<ul class="e3">
+				{dede:arclist row='5' titlelen='42' orderby='pubdate' idlist='' type='image.'}
+				<li>
+					<a href="[field:arcurl/]" class="preview" target="_blank"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/></a>
+					<a href="[field:arcurl/]" class="title" target="_blank">[field:title/]</a>
+					<span class="intro">更新:[field:pubdate function="GetDateMK(@me)"/]</span>
+				</li>
+				{/dede:arclist}
+			</ul>
+		</dd>
+	</dl>
+</div>
+
+<div class="hot mt1">
+	<dl class="tbox new-border">
+		<dt class="new-style"><strong>热点内容</strong></dt>
+		<dd>
+			<ul class="c1 ico2">
+				 {dede:arclist row='5' titlelen='42' orderby='pubdate' idlist=''}
+				 <li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+				 {/dede:arclist}
+			</ul>
+		</dd>
+	</dl>
+</div>
+
+<div class="mt1">
+	<dl class="tbox new-border">
+		<dt class="new-style"><strong>推荐图集</strong></dt>
+		<dd>
+			<ul class="e9">
+				{dede:arclist row='8' titlelen='24' orderby='pubdate' idlist='' type='image.'}
+				<li><a href="[field:arcurl/]" target="_blank"><img src="[field:litpic/]" alt="[field:title function='html2text(@me)'/]"/><span class="title">[field:title/]</span></a></li>
+				{/dede:arclist}
+			</ul>
+		</dd>
+	</dl>
+</div>

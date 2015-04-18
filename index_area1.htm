@@ -1,0 +1,137 @@
+<div class="area tbox" style="margin-bottom:4px; padding-top:4px;">
+	<div class="left narrow margin-bottom">
+		<div class="text-center margin-bottom">
+			<script language='javascript'>
+			linkarr = new Array();
+			picarr = new Array();
+			textarr = new Array();
+			var swf_width=320;
+			var swf_height=240;
+			var files = "";
+			var links = "";
+			var texts = "";
+			//这里设置调用标记
+			{dede:arclist flag='p' row='5'}
+			linkarr[[field:global.autoindex/]] = "[field:arcurl/]";
+			picarr[[field:global.autoindex/]]  = "[field:litpic/]";
+			textarr[[field:global.autoindex/]] = "[field:title function='html2text(@me)'/]";
+			{/dede:arclist}
+			for(i=1;i<picarr.length;i++){
+				if(files=="") files = picarr[i];
+				else files += "|"+picarr[i];
+			}
+			for(i=1;i<linkarr.length;i++){
+				if(links=="") links = linkarr[i];
+				else links += "|"+linkarr[i];
+			}
+			for(i=1;i<textarr.length;i++){
+				if(texts=="") texts = textarr[i];
+				else texts += "|"+textarr[i];
+			}
+			document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+			document.write('<param name="movie" value="{dede:global.cfg_templeturl/}/images/bcastr3.swf"><param name="quality" value="high">');
+			document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+			document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'">');
+			document.write('<embed src="{dede:global.cfg_templeturl/}/images/bcastr3.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+			</script>
+		</div>
+		<div class="text-center">
+			<a href="/wall2/index.html" target="_blank"><img src="/images/zgghw/digicity.jpg" width="320" border="0"/></a>
+		</div>
+	</div>
+	<div class="right wide">
+		<div class="index main_news">
+			<dl>
+				<dt>
+					<strong><a href="/html/xinwenjiaodian/" target="_blank">新闻焦点</a></strong>
+					<span><a href="/html/xinwenjiaodian/jinriyaowen/index.html" target="_blank">今日要闻</a> | <a href="/html/xinwenjiaodian/guihuashidian/index.html" target="_blank">规划视点</a> | <a href="/html/xinwenjiaodian/gongzhongguanzhu/index.html" target="_blank">公众关注</a> | <a href="/html/xinwenjiaodian/chengshijianshe/index.html" target="_blank">城市建设</a> | <a href="/html/xinwenjiaodian/huanjingbaohu/index.html" target="_blank">环境保护</a> | <a href="/html/xinwenjiaodian/nenyuanjishu/index.html" target="_blank">社会热点</a></span>
+				</dt>
+				<dd>
+					<div style="overflow: hidden; width: 464px; height: 200px;" id="demo_">
+						<div id="demo_1">
+							<ul class="d1 ico5" style="padding:0;">
+							{dede:arclist row='12' titlelen='80' orderby='pubdate' typeid='8' idlist='' channelid='1'}
+							<li><span class="title"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></span> <span class="date">[[field:pubdate function=MyDate('y-m-d',@me)/]]</span></li>
+							{/dede:arclist}
+							</ul>
+						</div>
+						<div id="demo_2"></div>
+					</div>
+					<script language="javascript"> 
+					var speed=80
+					demo_2.innerHTML=demo_1.innerHTML
+					function Marquee(){ 
+					if(demo_2.offsetTop-demo_.scrollTop<=0) 
+					demo_.scrollTop-=demo_1.offsetHeight
+					else{ 
+					demo_.scrollTop++
+					} 
+					} 
+					var MyMar=setInterval(Marquee,speed)
+					demo_.onmouseover=function() {clearInterval(MyMar)}
+					demo_.onmouseout=function() {MyMar=setInterval(Marquee,speed)}
+					</script>
+				</dd>
+			</dl>
+			<dl>
+				<dt>
+					<strong><a href="/html/shuzichengshi/" target="_blank">生态城市</a></strong>
+					<span><a href="/html/shuzichengshi/fazhanzhanlue/index.html" target="_blank">生态环境</a> | <a href="/html/shuzichengshi/jichusheshi/index.html" target="_blank">生态论坛</a> | <a href="/html/shuzichengshi/wangluojishu/index.html" target="_blank">生态战略</a> | <a href="/html/shuzichengshi/dianzishangwu/index.html" target="_blank">生态设施</a></span>
+				</dt>
+				<dd>
+					<ul class="d1 ico5 index_fix1">
+					{dede:arclist row='14' titlelen='60' orderby='pubdate' typeid='116' idlist=''}
+						<li><span class="title"><a href="[field:arcurl/]" target="_blank">[field:title/]</a></span></li>
+					{/dede:arclist}
+					<div class="clearfix"></div>
+					</ul>
+				</dd>
+			</dl>
+		</div>
+		<div class="index main_videos">
+			<script language='javascript'>
+				linkarr = new Array();
+				picarr = new Array();
+				textarr = new Array();
+				var swf_width=186;
+				var swf_height=160;
+				var files = "";
+				var links = "";
+				var texts = "";
+				//这里设置调用标记
+				{dede:arclist flag='p' row='4' typeid='232' }
+				linkarr[[field:global.autoindex/]] = "[field:arcurl/]";
+				picarr[[field:global.autoindex/]]  = "[field:litpic/]";
+				textarr[[field:global.autoindex/]] = "[field:title function='html2text(@me)'/]";
+				{/dede:arclist}
+				for(i=1;i<picarr.length;i++){
+					if(files=="") files = picarr[i];
+					else files += "|"+picarr[i];
+				}
+				for(i=1;i<linkarr.length;i++){
+					if(links=="") links = linkarr[i];
+					else links += "|"+linkarr[i];
+				}
+				for(i=1;i<textarr.length;i++){
+					if(texts=="") texts = textarr[i];
+					else texts += "|"+textarr[i];
+				}
+				document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="'+ swf_width +'" height="'+ swf_height +'">');
+				document.write('<param name="movie" value="{dede:global.cfg_templeturl/}/images/bcastr3.swf"><param name="quality" value="high">');
+				document.write('<param name="menu" value="false"><param name=wmode value="opaque">');
+				document.write('<param name="FlashVars" value="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'">');
+				document.write('<embed src="{dede:global.cfg_templeturl/}/images/bcastr3.swf" wmode="opaque" FlashVars="bcastr_file='+files+'&bcastr_link='+links+'&bcastr_title='+texts+'& menu="false" quality="high" width="'+ swf_width +'" height="'+ swf_height +'" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />'); document.write('</object>'); 
+				</script>
+				<div><a href="/html/guihuashipin/" target="_blank"><img src="/images/zgghw/guihuashipin.jpg" /></a></div>
+				<div style="margin-top:10px;">
+					<ul class="d1 ico4">
+					{dede:arclist row='10' titlelen='24' orderby='pubdate' typeid='232' idlist=''}
+					<li><a href="[field:arcurl/]" target="_blank">[field:title/]</a></li>
+					{/dede:arclist}
+					</ul>
+				</div>
+		</div>
+		<div class="clearfix"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>

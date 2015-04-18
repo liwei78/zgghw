@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset={dede:global.cfg_soft_lang/}" />
+<title>{dede:global.cfg_webname/}</title>
+<meta name="description" content="{dede:global.cfg_description/}" />
+<meta name="keywords" content="{dede:global.cfg_keywords/}" />
+<link href="{dede:global.cfg_templeturl/}/style/layout.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/style/page.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/style/fix.css" rel="stylesheet" media="screen" type="text/css" />
+<link href="{dede:global.cfg_templeturl/}/style/dedecms.css" rel="stylesheet" media="screen" type="text/css" />
+<script language="javascript" type="text/javascript" src="{dede:global.cfg_cmsurl/}/include/dedeajax2.js"></script>
+<script src="{dede:global.cfg_cmspath/}/images/js/j.js" language="javascript" type="text/javascript"></script>
+<script language="javascript" type="text/javascript">
+<!--
+	$(function(){
+		$("dl.tbox dt span.label a[_for]").mouseover(function(){
+			$(this).parents("span.label").children("a[_for]").removeClass("thisclass").parents("dl.tbox").children("dd").hide();
+			$(this).addClass("thisclass").blur();
+			$("#"+$(this).attr("_for")).show();
+		});
+		$("a[_for=uc_member]").mouseover();
+	});
+	
+	function CheckLogin(){
+	  var taget_obj = document.getElementById('_userlogin');
+	  myajax = new DedeAjax(taget_obj,false,false,'','','');
+	  myajax.SendGet2("{dede:global.cfg_cmspath/}/member/ajax_loginsta.php");
+	  DedeXHTTP = null;
+	}
+-->
+</script>
+</head>
+<body class="index">
+<div class="header">
+	<div class="banner">{dede:myad name='index_topbanner'/}</div>
+	<div class="banner">{dede:myad name='index_topbanner2'/}</div>
+	<div class="top w993 center">
+      <div class="title">
+        <a href="http://www.zgghw.org/" title="中国规划网" target='_blank'><img src="/images/zgghw/logo.jpg" border="0" alt="中国规划网" /></a>
+      </div>
+      <div class="rlink">
+        <ul>
+		{dede:channel type='top' row='30'}
+		<li><a href='[field:typeurl/]' target='_blank'>[field:typename/]</a></li>
+		{/dede:channel}
+        </ul>
+      </div>
+	</div><!-- //top -->
+	<!-- //菜单 -->
+	<div class="cities">
+  	<ul>
+		{dede:flink row='34' typeid='9' /}
+	</ul>
+	</div>
+</div><!-- //header -->
+
+<!-- /header -->
+<!-- index_head -->
+{dede:include filename="index_head.htm"/}
+<!-- /index_head -->
+<div class="w993 center clear mt1">
+
+	{dede:include filename="index_area1.htm"/}
+	
+	{dede:include filename="index_area2.htm"/}
+	
+	<div class="area">
+		<table width="100%" border="0" cellspacing="3" cellpadding="4">
+		<tr>
+			<td width="164">{dede:myad name='index_body_column_left'/}</td>
+			<td>{dede:myad name='index_body_column_middle'/}</td>
+			<td width="164">{dede:myad name='index_body_column_right'/}</td>
+		</tr>
+		</table>
+	</div>
+	
+	{dede:include filename="index_area3.htm"/}
+	
+	<div class="area">{dede:myad name='index_ad3'/}</div>
+	
+	{dede:include filename="index_area4.htm"/}
+	
+	<div class="area">{dede:myad name='index_ad4'/}</div>
+	
+	{dede:include filename="index_10ads.htm"/}
+	
+	{dede:include filename="index_area5.htm"/}
+	
+	<div class="area">{dede:myad name='index_ad5'/}</div>
+	
+	{dede:include filename="index_area6.htm"/}
+	
+	{dede:include filename="index_area7.htm"/}
+	
+</div>
+<div class="flink w993 center mt1 clear friend_links">
+	<dl>
+		<dd>
+			<ul>
+				{dede:flink row='30' typeid='1' /}
+		  </ul>
+		</dd>
+	</dl>
+</div>
+
+{dede:include filename="flink_pic.htm"/}
+
+{dede:include filename="footer.htm"/}
+<!-- /footer -->
+
+</body>
+</html>
